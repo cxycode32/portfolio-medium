@@ -3,31 +3,166 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    --foreground-rgb: 0, 0, 0;
+    --background-start-rgb: 214, 219, 220;
+    --background-end-rgb: 255, 255, 255;
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+    --bs-blue: #0d6efd;
+    --bs-indigo: #6610f2;
+    --bs-purple: #6f42c1;
+    --bs-pink: #d63384;
+    --bs-red: #dc3545;
+    --bs-orange: #fd7e14;
+    --bs-yellow: #ffc107;
+    --bs-green: #198754;
+    --bs-teal: #20c997;
+    --bs-cyan: #0dcaf0;
+    --bs-white: #fff;
+    --bs-gray: #6c757d;
+    --bs-gray-dark: #343a40;
+    --bs-primary: #0d6efd;
+    --bs-secondary: #6c757d;
+    --bs-success: #198754;
+    --bs-info: #0dcaf0;
+    --bs-warning: #ffc107;
+    --bs-danger: #dc3545;
+    --bs-light: #f8f9fa;
+    --bs-dark: #212529;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+    :root {
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 0, 0;
+        --background-end-rgb: 0, 0, 0;
+        scroll-behavior: smooth;
+    }
 }
 
+html,
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+    width: 100%;
+    height: 100%;
+    line-height: 32px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Montserrat", sans-serif;
+    background: #0a0a0a url(https://wpriverthemes.com/HTML/uniiq/assets/images/lines.png) fixed center top/100% repeat-y;
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+.pre-loader {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    height: 100vh;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: 1.5s;
+    transition: 1.5s;
+    background: #0a0a0a url(https://wpriverthemes.com/HTML/uniiq/assets/images/lines.png) fixed center top/100% repeat-y;
+}
+
+.pre-loader .d11 {
+    overflow: hidden;
+}
+
+.pre-loader .d11 .d12 {
+    margin-left: 34px;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.pre-loader #load-txt {
+    height: 100px;
+    padding-right: 34px;
+    position: relative;
+}
+
+.pre-loader #load-txt span {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.pre-loader #load-txt h1 {
+    color: var(--bs-white);
+    position: relative;
+}
+
+.pre-loader .progress {
+    width: 370px;
+    height: 6px;
+    border-radius: 1px;
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #e9ecef;
+    border-radius: .25rem;
+}
+
+.pre-loader .progress .progress-inner {
+    width: 0;
+    height: 6px;
+    border-radius: 1px;
+    background-color: var(--bs-white);
+}
+
+.pre-loader .pre-footer {
+    position: absolute;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.pre-loader .pre-footer p {
+    color: rgba(249, 249, 249, 0.5019607843);
+}
+
+.content {
+    display: none;
+    margin: 0 auto;
+    max-width: 1920px;
 }
