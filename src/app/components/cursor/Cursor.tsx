@@ -19,9 +19,9 @@ export const Cursor: React.FC = () => {
         });
     }, [position]);
 
-    useEffect(() => {
-        console.log("TESTING", position);
-    }, [position]);
+    // useEffect(() => {
+    //     console.log("TESTING 1", position);
+    // }, [position]);
 
     return (
         <div className='cursor-container'>

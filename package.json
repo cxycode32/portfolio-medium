@@ -9,11 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@tsparticles/all": "^3.2.0",
+    "@tsparticles/basic": "^3.2.0",
+    "@tsparticles/engine": "^3.2.0",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.2.0",
     "aos": "^3.0.0-beta.6",
+    "iconoir": "^7.3.0",
+    "iconoir-react": "^7.3.0",
     "next": "14.1.0",
-    "particles.js": "^2.0.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "tsparticles": "^3.2.0"
   },
   "devDependencies": {
     "@types/aos": "^3.0.7",

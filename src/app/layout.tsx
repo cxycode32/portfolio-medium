@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 // import AOS from 'aos';
-import 'aos/dist/aos.css'; // You can also use <link> for styles
+// import 'aos/dist/aos.css'; // You can also use <link> for styles
 import "./globals.css";
-import { Suspense } from "react";
-import Loading from "./loading";
+// import { Suspense } from "react";
+// import Loading from "./loading";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,11 +45,11 @@ export default function RootLayout({
         <html lang="en">
             <body
                 className={inter.className}
-                data-aos-easing="ease"
-                data-aos-duration="400"
-                data-aos-delay="0"
+                // data-aos-easing="ease"
+                // data-aos-duration="400"
+                // data-aos-delay="0"
             >
-                <Suspense fallback={<Loading />} />
+                {/* <Suspense fallback={<Loading />} /> */}
                 {children}</body>
         </html>
     );

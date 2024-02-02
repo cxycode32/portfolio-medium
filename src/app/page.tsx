@@ -1,5 +1,6 @@
-import Image from "next/image";
-import { Cursor } from "./components/Cursor";
+import { Cursor } from "./components/cursor/Cursor";
+import { Header } from "./components/header/Header";
+import { Ticker } from "./components/ticker/Ticker";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
         // }}
     >
         <Cursor />
+        <Ticker />
+        <Header />
     </div>
   );
 }
