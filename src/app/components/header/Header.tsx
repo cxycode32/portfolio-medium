@@ -86,7 +86,7 @@ export const Header: React.FC = () => {
     ]
 
     return (
-        <div className='header flex justify-between'>
+        <header className='header flex justify-between'>
             <div id="logo">
                 <a href='../../page.tsx'>
                     <Image
@@ -140,6 +140,6 @@ export const Header: React.FC = () => {
                     <div className='social'></div>
                 </div>
             </div>
-        </div>
+        </header>
     )
 }

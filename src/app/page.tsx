@@ -1,5 +1,6 @@
 import { Cursor } from "./components/cursor/Cursor";
 import { Header } from "./components/header/Header";
+import { Main } from "./components/main/Main";
 import { Ticker } from "./components/ticker/Ticker";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
         <Cursor />
         <Ticker />
         <Header />
+        <Main />
     </div>
   );
 }

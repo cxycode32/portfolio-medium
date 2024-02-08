@@ -259,6 +259,18 @@ ul, li {
     #ticker {
         margin: 15px 0 0;
     }
+
+    .header {
+        margin: 40px 0px 100px;
+    }
+
+    .left-sidebar {
+        display: none;
+    }
+
+    .menu-icon-wrapper {
+        display: block !important;
+    }
 }
 
 @media (max-width: 568px) {
@@ -271,6 +283,19 @@ ul, li {
     #projectPage1,
     #projectPage2 {
         margin: 0 1em;
+    }
+
+    .header {
+        margin: 40px 0px;
+    }
+
+    #logo {
+        width: auto;
+        margin: 10px 0px;
+    }
+
+    .contact {
+        display: none !important;
     }
 }
 
