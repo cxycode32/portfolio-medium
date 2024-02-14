@@ -117,7 +117,8 @@ a {
     text-decoration: none;
 }
 
-ul, li {
+ul,
+li {
     list-style: none;
 }
 
@@ -205,46 +206,82 @@ ul, li {
 
 @media (max-width: 1440px) {
     #ticker {
-        margin: 30px 64px 0px 35px;
+        margin: 30px 64px 0px 35px !important;
     }
 
     .header {
-        margin: 40px 80px 100px 38px;
+        margin: 40px 80px 100px 38px !important;
     }
 }
 
 @media (max-width: 1280px) {
     .header {
-        margin: 40px 64px 100px 35px;
+        margin: 40px 64px 100px 35px !important;
     }
 
     .mobile-hamburger .left-sidebar li {
-        margin-bottom: 20px;
+        margin-bottom: 20px !important;
+    }
+
+    #home main .item-wrapper,
+    #about main .item-wrapper,
+    #portfolio main .item-wrapper,
+    #skills main .item-wrapper,
+    #contact main .item-wrapper,
+    #projectPage1 main .item-wrapper,
+    #projectPage2 main .item-wrapper {
+        max-width: 950px !important;
     }
 }
 
 @media (max-width: 1200px) {
     .contact {
-        visibility: hidden;
+        visibility: hidden !important;
     }
 }
 
 @media (max-width: 992px) {
+
     .cursor,
     .dot {
-        display: none;
+        display: none !important;
     }
 
     #ticker {
-        margin: auto 26px;
+        margin: auto 26px !important;
     }
 
     .header {
-        margin: 40px 26px 100px;
+        margin: 40px 26px 100px !important;
+    }
+
+    #home main .item-wrapper,
+    #about main .item-wrapper,
+    #portfolio main .item-wrapper,
+    #skills main .item-wrapper,
+    #contact main .item-wrapper,
+    #projectPage1 main .item-wrapper,
+    #projectPage2 main .item-wrapper {
+        max-width: 758px !important;
+    }
+
+    #home main .item-wrapper {
+        grid-template-areas: "img1 . ."
+            "img1 img2 img2"
+            "img3 img3 ."
+            "img3 img3 img4"
+            "img3 img3 img4"
+            "img5 img5 img4"
+            "img5 img5 ."
+            "img6 img7 img7"
+            "img6 . ."
+            "img6 . ." !important;
+        row-gap: 10px !important;
     }
 }
 
 @media (max-width: 800px) {
+
     #home,
     #about,
     #portfolio,
@@ -253,27 +290,42 @@ ul, li {
     #portfolioDetail,
     #projectPage1,
     #projectPage2 {
-        margin: 0 1em;
+        margin: 0 1em !important;
     }
 
     #ticker {
-        margin: 15px 0 0;
+        margin: 15px 0 0 !important;
     }
 
     .header {
-        margin: 40px 0px 100px;
+        margin: 40px 0px 100px !important;
     }
 
     .left-sidebar {
-        display: none;
+        display: none !important;
     }
 
     .menu-icon-wrapper {
         display: block !important;
     }
+
+    #home main .item-wrapper,
+    #about main .item-wrapper,
+    #portfolio main .item-wrapper,
+    #skills main .item-wrapper,
+    #contact main .item-wrapper {
+        max-width: 758px !important;
+    }
+}
+
+@media (min-width: 576px) {
+    .text-sm-end {
+        text-align: right !important;
+    }
 }
 
 @media (max-width: 568px) {
+
     #home,
     #about,
     #portfolio,
@@ -282,27 +334,55 @@ ul, li {
     #portfolioDetail,
     #projectPage1,
     #projectPage2 {
-        margin: 0 1em;
+        margin: 0 1em !important;
     }
 
     .header {
-        margin: 40px 0px;
+        margin: 40px 0px !important;
     }
 
     #logo {
-        width: auto;
-        margin: 10px 0px;
+        width: auto !important;
+        margin: 10px 0px !important;
     }
 
     .contact {
         display: none !important;
     }
+
+    #home main .item-wrapper,
+    #about main .item-wrapper,
+    #portfolio main .item-wrapper,
+    #skills main .item-wrapper,
+    #contact main .item-wrapper,
+    #projectPage1 main .item-wrapper,
+    #projectPage2 main .item-wrapper {
+        overflow: hidden !important;
+        margin: 0 !important;
+    }
+
+    #home main .item-wrapper {
+        grid-template-areas: "img1"
+            "img2"
+            "img3"
+            "img4"
+            "img5"
+            "img6"
+            "img7" !important;
+    }
+
+    .item-wrapper .items .portrait,
+    .item-wrapper .items .landscape {
+        max-width: 100% !important;
+    }
+
 }
 
 @keyframes connectSpin {
     0% {
         transform: rotateX(10deg) rotateY(40deg) skewY(-180deg);
     }
+
     100% {
         transform: rotate(0deg) skew(0deg);
     }
@@ -312,6 +392,7 @@ ul, li {
     0% {
         left: -0%;
     }
+
     100% {
         left: -51%;
     }
@@ -325,6 +406,18 @@ ul, li {
 
     100% {
         right: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes entry-animation {
+    0% {
+        transform: translateY(200px);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(0px);
         opacity: 1;
     }
 }

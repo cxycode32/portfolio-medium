@@ -1,3 +1,4 @@
+
 import { Cursor } from "./components/cursor/Cursor";
 import { Header } from "./components/header/Header";
 import { Main } from "./components/main/Main";
@@ -8,9 +9,9 @@ export default function Home() {
     <div
         id="home"
         className="content"
-        // style={{
-        //     display: "block"
-        // }}
+        style={{
+            display: "block"
+        }}
     >
         <Cursor />
         <Ticker />
