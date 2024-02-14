@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { Dribbble, Twitter, Instagram } from 'iconoir-react'
-import './Header.css'
 import { ReactNode } from 'react'
+import './Header.css'
 
 interface navItemProps {
     href: string,

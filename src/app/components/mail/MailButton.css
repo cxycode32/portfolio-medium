@@ -1,0 +1,106 @@
+#connect {
+    position: relative;
+    overflow: hidden;
+    max-width: 1106px;
+    border-radius: 10px;
+    padding: 45px 30px;
+    margin: 91px auto 0;
+    justify-content: space-between;
+    border: 1px solid #f9f9f91f;
+    transition: transform 2s ease-in-out;
+}
+
+.connect-spin {
+    animation: connectSpin 2s linear;
+}
+
+.space {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #2a2a2a44;
+}
+
+#connect .connect-content {
+    position: relative;
+    z-index: 1;
+    justify-content: space-between;
+}
+
+#connect section h3 {
+    color: var(--rgb-white-2);
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0 0 15px;
+}
+
+#connect section .hide5 {
+    display: none;
+}
+
+#connect div:last-child {
+    gap: 25px;
+}
+
+.animated-btn {
+    --offset: 3px;
+    border-radius: 50px;
+    position: relative;
+    height: 50px;
+    width: 280px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 5px;
+}
+
+.animated-btn::before {
+    content: '';
+    background: conic-gradient(transparent 270deg, white, transparent);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1;
+    width: 100%;
+    animation: rotate 2s linear infinite;
+}
+
+.animated-btn::after {
+    content: '';
+    background: inherit;
+    border-radius: inherit;
+    position: absolute;
+    inset: var(--offset);
+    height: calc(100% - 2 * var(--offset));
+    width: calc(100% - 2 * var(--offset));
+}
+
+.animated-btn .button {
+    background: transparent;
+    position: absolute;
+    border: none;
+    inset: 0;
+    z-index: 10;
+    margin: 1px;
+}
+
+#connect div .button {
+    color: #f9f9f9cc;
+    padding: 8px 30px;
+    border: none;
+    display: flex;
+    gap: 10px;
+    align-self: center;
+    border-radius: 50px;
+    background-color: var(--black-2);
+    transition: border-image 3s ease;
+    animation: borderRotate var(--d) linear infinite forwards;
+}
+
+#connect .connect-content div aside {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}

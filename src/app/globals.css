@@ -63,7 +63,9 @@
     --white: #f9f9f9;
     --yellow: #D7B065;
     --black: #191919;
+    --black-2: #1e1e1e;
     --rgb-white: rgb(203, 203, 203);
+    --rgb-white-2: rgb(249, 249, 249);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -111,6 +113,10 @@ h6 {
     margin-bottom: 0.5rem;
     font-weight: 500;
     line-height: 1.2;
+}
+
+h3 {
+    font-size: calc(1.3rem + .6vw);
 }
 
 a {
@@ -232,11 +238,19 @@ li {
     #projectPage2 main .item-wrapper {
         max-width: 950px !important;
     }
+
+    #connect {
+        max-width: 950px !important;
+    }
 }
 
 @media (max-width: 1200px) {
     .contact {
         visibility: hidden !important;
+    }
+
+    #connect .connect-content div aside {
+        display: none !important;
     }
 }
 
@@ -278,6 +292,10 @@ li {
             "img6 . ." !important;
         row-gap: 10px !important;
     }
+
+    #connect {
+        max-width: 758px !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -315,6 +333,31 @@ li {
     #skills main .item-wrapper,
     #contact main .item-wrapper {
         max-width: 758px !important;
+    }
+
+    #connect {
+        max-width: 758px !important;
+        max-height: 250px !important;
+    }
+
+    #connect .connect-content {
+        gap: 30px !important;
+        align-items: center !important;
+        flex-direction: column !important;
+    }
+
+    #connect section .hide4 {
+        display: none !important;
+    }
+
+    #connect section .hide5 {
+        display: block !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #connect {
+        padding: 30px 10px !important;
     }
 }
 
@@ -376,6 +419,13 @@ li {
         max-width: 100% !important;
     }
 
+    #connect section .hide4 {
+        text-align: center !important;
+    }
+
+    #connect section p {
+        text-align: center !important;
+    }
 }
 
 @keyframes connectSpin {
@@ -419,5 +469,21 @@ li {
     100% {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes connectSpin {
+    0% {
+        transform: rotateX(10deg) rotateY(40deg) skewY(-180deg);
+    }
+
+    100% {
+        transform: rotate(0deg) skew(0deg);
+    }
+}
+
+@keyframes borderRotate {
+    100% {
+        --angle: 420deg;
     }
 }
