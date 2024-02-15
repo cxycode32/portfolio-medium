@@ -1,5 +1,7 @@
+"use client"
+
 import { Mail, Dribbble, Twitter, Instagram } from 'iconoir-react'
-import { ReactNode } from 'react'
+import { ReactNode, useState, useRef, useEffect } from 'react'
 import './MailButton.css'
 
 interface contactItemProps {
@@ -8,22 +10,56 @@ interface contactItemProps {
 
 export const MailButton: React.FC = () => {
 
-    const iconSize: number = 24;
+    const iconSize: number = 20;
+
+    const [isShowing, setIsShowing] = useState(false);
+    const targetRef = useRef(null);
 
     const contactItem: contactItemProps[] = [
         {
-            icon: <Dribbble height={iconSize} width={iconSize} />,
+            icon: <Dribbble height={iconSize} width={iconSize} className='icon' />,
         },
         {
-            icon: <Twitter height={iconSize} width={iconSize} />,
+            icon: <Twitter height={iconSize} width={iconSize} className='icon' />,
         },
         {
-            icon: <Instagram height={iconSize} width={iconSize} />,
+            icon: <Instagram height={iconSize} width={iconSize} className='icon' />,
         }
     ]
 
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsShowing(entry.isIntersecting);
+            },
+            {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5,
+            }
+        );
+        console.log("TESTING 1", observer);
+        console.log("TESTING 2", targetRef);
+        console.log("TESTING 3", targetRef.current);
+        if (targetRef.current) {
+            observer.observe(targetRef.current);
+            console.log("TESTING 4", observer);
+        }
+
+        return () => {
+            if (targetRef.current) {
+                observer.unobserve(targetRef.current);
+                console.log("TESTING 5", observer);
+            }
+        }
+    }, []);
+
     return (
-        <div id="connect" className="animation-spin connect-spin">
+        <div
+            id="connect"
+            ref={targetRef}
+            className={`animation-spin ${isShowing ? 'connect-spin' : ''}`}
+        >
             <div className="space"></div>
             <div className="connect-content flex">
                 <section>

@@ -18,7 +18,7 @@
         "img6 . ."
         "img6 . .";
     column-gap: 24px;
-    width: 100%;
+    width: 60vw;
 }
 
 .item-wrapper .items:nth-child(1) {

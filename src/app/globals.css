@@ -66,6 +66,12 @@
     --black-2: #1e1e1e;
     --rgb-white: rgb(203, 203, 203);
     --rgb-white-2: rgb(249, 249, 249);
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -428,6 +434,30 @@ li {
     }
 }
 
+@-webkit-keyframes about-text {
+    0% {
+        top: 200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes about-text {
+    0% {
+        top: 200px;
+        opacity: 0.1;
+    }
+
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
 @keyframes connectSpin {
     0% {
         transform: rotateX(10deg) rotateY(40deg) skewY(-180deg);
@@ -482,8 +512,63 @@ li {
     }
 }
 
+@keyframes rotate {
+    0% {
+        transform: translate(-50%, -50%) scale(1.4) rotate(0turn);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.4) rotate(1turn);
+    }
+}
+
 @keyframes borderRotate {
     100% {
         --angle: 420deg;
     }
+}
+
+@keyframes borderRadial {
+    20% {
+        --gradX: 10%;
+        --gradY: 50%;
+    }
+
+    40% {
+        --gradX: 100%;
+        --gradY: 100%;
+    }
+
+    60% {
+        --gradX: 50%;
+        --gradY: 10%;
+    }
+
+    80% {
+        --gradX: 0%;
+        --gradY: 50%;
+    }
+
+    100% {
+        --gradX: 50%;
+        --gradY: 0%;
+    }
+}
+
+@property --angle {
+    syntax: '<angle>';
+    inherits: true;
+    initial-value: 90deg;
+}
+
+@property --gradY {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 0%;
+}
+
+@property --gradX {
+    syntax: '<percentage>';
+    inherits: true;
+    initial-value: 50%;
 }

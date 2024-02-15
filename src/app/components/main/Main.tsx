@@ -46,7 +46,7 @@ export const Main: React.FC = () => {
             href: "./project-page2.html",
             layout: "portrait",
             dataWord: "PROJECT SEVEN",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-1.png",
+            img: "/images/h-1.png",
             alt: "img1",
             dataHover: "01/PROJECT SEVEN",
             text: "PROJECT SEVEN",
@@ -56,7 +56,7 @@ export const Main: React.FC = () => {
             href: "./blog-single5.html",
             layout: "landscape",
             dataWord: "ARCHIFACT",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-2.png",
+            img: "/images/h-2.png",
             alt: "img2",
             dataHover: "02/ARCHIFACT",
             text: "ARCHIFACT",
@@ -66,7 +66,7 @@ export const Main: React.FC = () => {
             href: "./project-page4.html",
             layout: "landscape",
             dataWord: "CODY FIVE",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-3.png",
+            img: "/images/h-3.png",
             alt: "img3",
             dataHover: "03/CODY FIVE",
             text: "CODY FIVE",
@@ -78,7 +78,7 @@ export const Main: React.FC = () => {
             href: "./project-page3.html",
             layout: "portrait",
             dataWord: "UNITERM S",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-4.png",
+            img: "/images/h-4.png",
             alt: "img4",
             dataHover: "04/UNITERM S",
             text: "UNITERM S",
@@ -90,7 +90,7 @@ export const Main: React.FC = () => {
             href: "./blog-single6.html",
             layout: "landscape",
             dataWord: "MINUTES X",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-5.png",
+            img: "/images/h-5.png",
             alt: "img5",
             dataHover: "05/MINUTES X",
             text: "MINUTES X",
@@ -102,7 +102,7 @@ export const Main: React.FC = () => {
             href: "./project-page1.html",
             layout: "portrait",
             dataWord: "SHADOW COM",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-6.png",
+            img: "/images/h-6.png",
             alt: "img6",
             dataHover: "06/SHADOW COM",
             text: "SHADOW COM",
@@ -114,7 +114,7 @@ export const Main: React.FC = () => {
             href: "./blog-single5.html",
             layout: "landscape",
             dataWord: "BOMBRADER",
-            img: "https://wpriverthemes.com/HTML/uniiq/assets/images/h-7.png",
+            img: "/images/h-7.png",
             alt: "img7",
             dataHover: "07/BOMBRADER",
             text: "BOMBRADER",
@@ -142,6 +142,8 @@ export const Main: React.FC = () => {
                                         width={100}
                                         height={100}
                                         className='image-animation'
+                                        objectFit='cover'
+                                        priority
                                     />
                                 </div>
                                 <div className='project-name'>
@@ -161,6 +163,8 @@ export const Main: React.FC = () => {
                                         width={100}
                                         height={100}
                                         className='image-animation'
+                                        objectFit='cover'
+                                        priority
                                     />
                                 </div>
                                 <div className='project-name'>
