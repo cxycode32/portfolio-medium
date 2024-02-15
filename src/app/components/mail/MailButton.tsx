@@ -10,20 +10,21 @@ interface contactItemProps {
 
 export const MailButton: React.FC = () => {
 
-    const iconSize: number = 20;
+    const iconSize1: number = 20;
+    const iconSize2: number = 24;
 
     const [isShowing, setIsShowing] = useState(false);
     const targetRef = useRef(null);
 
     const contactItem: contactItemProps[] = [
         {
-            icon: <Dribbble height={iconSize} width={iconSize} className='icon' />,
+            icon: <Dribbble height={iconSize2} width={iconSize2} className='icon' />,
         },
         {
-            icon: <Twitter height={iconSize} width={iconSize} className='icon' />,
+            icon: <Twitter height={iconSize2} width={iconSize2} className='icon' />,
         },
         {
-            icon: <Instagram height={iconSize} width={iconSize} className='icon' />,
+            icon: <Instagram height={iconSize2} width={iconSize2} className='icon' />,
         }
     ]
 
@@ -79,7 +80,7 @@ export const MailButton: React.FC = () => {
                 <div className="mail-btn flex items-center">
                     <div className="animated-btn">
                         <a className="button" href="mailto:themespace@mail.com">
-                            <Mail height={iconSize} width={iconSize} className='self-center' />
+                            <Mail height={iconSize1} width={iconSize1} className='self-center' />
                             themespace@mail.com
                         </a>
                     </div>

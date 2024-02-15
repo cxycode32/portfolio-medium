@@ -142,9 +142,9 @@ export const Main: React.FC = () => {
                                         width={100}
                                         height={100}
                                         className='image-animation'
-                                        objectFit='cover'
-                                        priority
-                                    />
+                                        quality={100}
+                                        priority={true}
+                                        />
                                 </div>
                                 <div className='project-name'>
                                     <p className={`text-lg font-medium tracking-widest ${item.textStyle}`} data-hover={item.dataHover}>
@@ -163,8 +163,8 @@ export const Main: React.FC = () => {
                                         width={100}
                                         height={100}
                                         className='image-animation'
-                                        objectFit='cover'
-                                        priority
+                                        quality={100}
+                                        priority={true}
                                     />
                                 </div>
                                 <div className='project-name'>
