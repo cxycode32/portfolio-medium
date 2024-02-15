@@ -1,5 +1,6 @@
 
 import { Cursor } from "./components/cursor/Cursor";
+import { Footer } from "./components/footer/Footer";
 import { Header } from "./components/header/Header";
 import { MailButton } from "./components/mail/MailButton";
 import { Main } from "./components/main/Main";
@@ -19,6 +20,7 @@ export default function Home() {
         <Header />
         <Main />
         <MailButton />
+        <Footer />
     </div>
   );
 }

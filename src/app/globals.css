@@ -255,9 +255,11 @@ li {
         visibility: hidden !important;
     }
 
+    #footer div #hide1,
     #connect .connect-content div aside {
         display: none !important;
     }
+
 }
 
 @media (max-width: 992px) {
@@ -301,6 +303,10 @@ li {
 
     #connect {
         max-width: 758px !important;
+    }
+
+    #footer {
+        margin: 100px 0 0 !important;
     }
 }
 
@@ -357,6 +363,18 @@ li {
     }
 
     #connect section .hide5 {
+        display: block !important;
+    }
+
+    #footer {
+        flex-direction: column !important;
+    }
+
+    #footer div #hide2 {
+        display: none !important;
+    }
+
+    #footer aside #hide3 {
         display: block !important;
     }
 }
