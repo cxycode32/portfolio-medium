@@ -61,9 +61,11 @@
     --fw-8: 800;
     --fw-9: 900;
     --white: #f9f9f9;
+    --white-2: #e9ecef;
     --yellow: #D7B065;
     --black: #191919;
     --black-2: #1e1e1e;
+    --black-3: #0a0a0a;
     --rgb-white: rgb(203, 203, 203);
     --rgb-white-2: rgb(249, 249, 249);
     --d: 2500ms;
@@ -220,6 +222,27 @@ li {
     animation: entry-animation 2s;
 }
 
+.progress {
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: var(--white-2);
+    border-radius: 0.25rem;
+}
+
+.progress-bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    color: white;
+    text-align: center;
+    white-space: nowrap;
+    background-color: var(--yellow);
+    transition: width .6s ease;
+}
+
 @media (max-width: 1440px) {
     #ticker {
         margin: 30px 64px 0px 35px !important;
@@ -251,6 +274,10 @@ li {
 
     #connect {
         max-width: 950px !important;
+    }
+
+    #skills .item-wrapper .skill1 {
+        width: 930px;
     }
 }
 
@@ -351,6 +378,35 @@ li {
 
     #portfolio .item-wrapper .articles article .image-wrapper h1 {
         font-size: 25px !important;
+    }
+
+    #skills .item-wrapper .skill1 {
+        width: 700px !important;
+    }
+
+    #skills .item-wrapper .skill1 .skill1-image {
+        max-width: 100%  !important;
+        height: 100%  !important;
+    }
+
+    #skills .item-wrapper .skill1 .skill1-image .image {
+        width: 90vw !important;
+        border-radius: 10px !important;
+        object-fit: cover !important;
+    }
+
+    #skills .item-wrapper .skill1 .skill1-list {
+        gap: 10px !important;
+    }
+
+    #skills .item-wrapper .skill2 .skill2-list {
+        max-width: 100% !important;
+        margin: 20px 0 40px !important;
+    }
+
+    #skills .item-wrapper .skill2 .skill2-image {
+        max-width: 100%;
+        margin: 20px 0;
     }
 }
 
@@ -456,11 +512,31 @@ li {
     #about .item-wrapper .blContent .blContent-wrapper .para p {
         margin: 30px 0 !important;
     }
+
+    #skills .item-wrapper .skill1 {
+        margin: 50px 0 !important;
+    }
+
+    #skills .item-wrapper .skill2 {
+        margin: 50px 0 !important;
+    }
+
+    #skills .item-wrapper .skill1 .skill1-list {
+        gap: 30px !important;
+    }
 }
 
 @media (max-width: 767px) {
     #connect {
         padding: 30px 10px !important;
+    }
+
+    #skills .item-wrapper .skill1 {
+        width: auto !important;
+    }
+
+    #skills .item-wrapper .skill1 .skill1-image {
+        margin-bottom: 70px !important;
     }
 }
 

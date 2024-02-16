@@ -1,0 +1,27 @@
+.skill .skill-label {
+    color: var(--white);
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-weight: 400;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    line-height: 1.2;
+}
+
+.skill .progress {
+    height: 8px;
+    border-radius: 0;
+    background: rgba(249, 249, 249, 0.5019607843);
+}
+
+.skill .progress .progress-bar {
+    background: var(--yellow);
+    transition: width 0.7s;
+}
+
+.skill2 .skill2-list .skill + .skill {
+    margin-top: 60px;
+}

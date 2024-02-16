@@ -1,0 +1,28 @@
+.circle-container {
+    color: var(--white);
+}
+
+.circle-container .circle-wrapper .circle-progress {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 170px;
+    height: 170px;
+    background: conic-gradient(var(--yellow) 0deg, rgba(249, 249, 249, 0.5019607843) 0deg);
+    transition: background-color 1s ease;
+    border-radius: 50%;
+}
+
+.circle-container .circle-wrapper .circle-progress::before {
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: var(--black-3);
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-container .circle-wrapper .circle-text {
+    margin: 20px 0 0;
+}
