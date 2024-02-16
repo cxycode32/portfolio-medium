@@ -63,6 +63,9 @@
     --white: #f9f9f9;
     --white-2: #e9ecef;
     --yellow: #D7B065;
+    --light-green: #d1e7dd;
+    --light-green-2: #badbcc;
+    --green: #0f5132;
     --black: #191919;
     --black-2: #1e1e1e;
     --black-3: #0a0a0a;
@@ -222,6 +225,17 @@ li {
     animation: entry-animation 2s;
 }
 
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(var(--bs-gutter-y) * -1);
+    margin-right: calc(var(--bs-gutter-x) * -.5);
+    margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
 .progress {
     display: flex;
     height: 1rem;
@@ -241,6 +255,34 @@ li {
     white-space: nowrap;
     background-color: var(--yellow);
     transition: width .6s ease;
+}
+
+.content footer {
+    border-top: 1px solid #80808049;
+    margin: 160px 3em 0;
+    padding: 30px 0 10px;
+}
+
+.content footer>* {
+    padding: 0 20px;
+}
+
+.content footer div {
+    gap: 25px;
+}
+
+.alert {
+    position: relative;
+    padding: 1rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+
+.alert-success {
+    color: var(--green);
+    background-color: var(--light-green);
+    border-color: var(--light-green-2);
 }
 
 @media (max-width: 1440px) {
@@ -277,7 +319,7 @@ li {
     }
 
     #skills .item-wrapper .skill1 {
-        width: 930px;
+        width: 930px !important;
     }
 }
 
@@ -405,8 +447,21 @@ li {
     }
 
     #skills .item-wrapper .skill2 .skill2-image {
-        max-width: 100%;
-        margin: 20px 0;
+        max-width: 100% !important;
+        margin: 20px 0 !important;
+    }
+
+    #contact .item-wrapper .form-content {
+        margin: 100px 0 !important;
+    }
+
+    .content footer {
+        margin: 100px 0 0 !important;
+    }
+
+    #contact .item-wrapper .caption h2 {
+        font-size: 25px !important;
+        padding: 0 80px !important;
     }
 }
 
@@ -416,8 +471,8 @@ li {
     }
 
     #portfolio .item-wrapper .articles article:hover .image-wrapper .hover-img {
-        margin-right: 50px;
-        margin-left: 150px;
+        margin-right: 50px !important;
+        margin-left: 150px !important;
     }
 
     #portfolio .item-wrapper .articles article .image-wrapper h1 {
@@ -523,6 +578,23 @@ li {
 
     #skills .item-wrapper .skill1 .skill1-list {
         gap: 30px !important;
+    }
+
+    #contact .item-wrapper .about-image {
+        margin: 60px 0 !important;
+    }
+
+    #contact .item-wrapper .form-content {
+        margin-bottom: 30px !important;
+    }
+
+    .content footer {
+        flex-direction: column !important;
+    }
+
+    #contact .item-wrapper .caption h2 {
+        font-size: 20px !important;
+        line-height: 25px !important;
     }
 }
 
@@ -646,6 +718,19 @@ li {
 
     #about .item-wrapper .blContent .blContent-wrapper .about-det .details {
         padding: 0 !important;
+    }
+
+    #contact .item-wrapper .caption h2 {
+        padding: 0 !important;
+        line-height: 30px !important;
+    }
+
+    #contact main footer .reach {
+        margin: 10px 0 !important;
+    }
+
+    #contact main footer .reach div:first-child {
+        margin: 0 !important;
     }
 }
 
