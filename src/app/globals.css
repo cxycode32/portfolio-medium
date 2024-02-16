@@ -216,6 +216,10 @@ li {
     max-width: 1920px;
 }
 
+.item-wrapper {
+    animation: entry-animation 2s;
+}
+
 @media (max-width: 1440px) {
     #ticker {
         margin: 30px 64px 0px 35px !important;
@@ -308,6 +312,11 @@ li {
     #footer {
         margin: 100px 0 0 !important;
     }
+
+    #about .caption h2 {
+        font-size: 25px !important;
+        padding: 0 80px !important;
+    }
 }
 
 @media (max-width: 800px) {
@@ -376,6 +385,22 @@ li {
 
     #footer aside #hide3 {
         display: block !important;
+    }
+
+    #about .caption h2 {
+        font-size: 20px !important;
+    }
+
+    #about .item-wrapper .blContent {
+        margin: 50px 0 !important;
+    }
+
+    #about .item-wrapper .blContent .blContent-wrapper .about-det {
+        margin: 0 !important;
+    }
+
+    #about .item-wrapper .blContent .blContent-wrapper .para p {
+        margin: 30px 0 !important;
     }
 }
 
@@ -449,6 +474,27 @@ li {
 
     #connect section p {
         text-align: center !important;
+    }
+
+    #about main .item-wrapper {
+        margin: 0 !important;
+    }
+
+    #about .caption h2 {
+        padding: 0 !important;
+        line-height: 30px !important;
+    }
+
+    #about .item-wrapper .about-image {
+        margin: 40px 0 !important;
+    }
+
+    #about .item-wrapper .blContent .blContent-wrapper .about-det {
+        grid-template-columns: auto !important;
+    }
+
+    #about .item-wrapper .blContent .blContent-wrapper .about-det .details {
+        padding: 0 !important;
     }
 }
 

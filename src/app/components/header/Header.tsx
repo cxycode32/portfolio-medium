@@ -24,27 +24,27 @@ export const Header: React.FC = () => {
 
     const navItem: navItemProps[] = [
         {
-            href: "../../page.tsx",
+            href: "../../",
             dataWord: "Home",
             text: "Home"
         },
         {
-            href: "../../about/page.tsx",
+            href: "../../about",
             dataWord: "About",
             text: "About"
         },
         {
-            href: "../../portfolio/page.tsx",
+            href: "../../portfolio",
             dataWord: "Portfolio",
             text: "Portfolio"
         },
         {
-            href: "../../skills/page.tsx",
+            href: "../../skills",
             dataWord: "Skills",
             text: "Skills"
         },
         {
-            href: "../../contact/page.tsx",
+            href: "../../contact",
             dataWord: "Contact",
             text: "Contact"
         },
@@ -64,23 +64,23 @@ export const Header: React.FC = () => {
 
     const leftSidebarItem: leftSidebarItemProps[] = [
         {
-            href: "./home.html",
+            href: "../../",
             text: "Home"
         },
         {
-            href: "./about.html",
+            href: "../../about",
             text: "About"
         },
         {
-            href: "./portfolio.html",
+            href: "../../portfolio",
             text: "Portfolio"
         },
         {
-            href: "./skills.html",
+            href: "../../skills",
             text: "Skills"
         },
         {
-            href: "./contact.html",
+            href: "../../contact",
             text: "Contact"
         }
     ]
@@ -88,7 +88,7 @@ export const Header: React.FC = () => {
     return (
         <header className='header flex justify-between'>
             <div id="logo">
-                <a href='../../page.tsx'>
+                <a href='../../'>
                     <Image
                         src="https://wpriverthemes.com/HTML/uniiq/assets/images/dLogo.svg"
                         alt="logo"
