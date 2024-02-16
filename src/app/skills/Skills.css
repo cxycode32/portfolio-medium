@@ -41,6 +41,10 @@
     object-fit: cover;
 }
 
+#skills .item-wrapper .skill1 .skill1-image .image:hover {
+    scale: 1;
+}
+
 #skills .item-wrapper .blContent {
     width: 100%;
 }

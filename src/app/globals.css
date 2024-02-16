@@ -540,9 +540,30 @@ li {
     }
 }
 
+@media (min-width: 768px) {
+    .align-self-md-center {
+        align-self: center !important;
+    }
+
+    .col-md-5 {
+        flex: 0 0 auto !important;
+        width: 41.7% !important;
+    }
+
+    .col-md-6 {
+        flex: 0 0 auto !important;
+        width: 50% !important;
+    }
+}
+
 @media (min-width: 576px) {
     .text-sm-end {
         text-align: right !important;
+    }
+
+    .col-sm-4 {
+        flex: 0 0 auto !important;
+        width: 33.33% !important;
     }
 }
 

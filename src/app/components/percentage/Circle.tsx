@@ -14,7 +14,7 @@ export const Circle: React.FC<CircleProps> = ({ dataCircle, dataColor1, dataColo
     const deg: number = 360 / 100 * dataCircle;
 
     return (
-        <div className='circle-container font-semibold'>
+        <div className='circle-container font-semibold col-sm-4'>
             <div className='circle-wrapper flex flex-col items-center'>
                 <div
                     className='circle-progress'

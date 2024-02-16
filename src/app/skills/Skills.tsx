@@ -88,7 +88,7 @@ export const Skills: React.FC = () => {
         <main className='flex justify-center'>
             <div className='item-wrapper'>
                 <div className='skill1 row justify-between'>
-                    <div className='skill1-image'>
+                    <div className='skill1-image align-self-md-center col-md-5'>
                         <Image
                             src="https://wpriverthemes.com/HTML/uniiq/assets/images/skill1.png"
                             alt="img"
@@ -97,7 +97,7 @@ export const Skills: React.FC = () => {
                             className='image'
                         />
                     </div>
-                    <div className='skill1-list row gap-[50px] justify-between items-center'>
+                    <div className='skill1-list row gap-[50px] justify-between items-center col-md-6'>
                         {circleItems.map((item, index) => (
                             <Circle
                                 key={index}
