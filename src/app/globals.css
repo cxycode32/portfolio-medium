@@ -266,6 +266,12 @@ li {
 
 }
 
+@media (min-width: 1200px) {
+    #portfolio .item-wrapper .articles article .image-wrapper h1 {
+        font-size: 2.5rem !important;
+    }
+}
+
 @media (max-width: 992px) {
 
     .cursor,
@@ -316,6 +322,54 @@ li {
     #about .caption h2 {
         font-size: 25px !important;
         padding: 0 80px !important;
+    }
+
+    #portfolio .item-wrapper .articles article {
+        flex-direction: column !important;
+    }
+
+    #portfolio .item-wrapper .articles article .image-wrapper {
+        flex-direction: column !important;
+        transform: translateX(0) !important;
+    }
+
+    #portfolio .item-wrapper .articles article .image-wrapper .hover-img {
+        width: auto !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+
+    #portfolio .item-wrapper .articles article .image-wrapper .hover-img .article-img {
+        object-fit: cover !important;
+        scale: 1.1 !important;
+        transition: scale 1s cubic-bezier(0.165, 0.84, 0.44, 1) 0s !important;
+    }
+
+    #portfolio .item-wrapper .articles article .image-wrapper .hover-img .article-img:hover {
+        scale: 1 !important;
+    }
+
+    #portfolio .item-wrapper .articles article .image-wrapper h1 {
+        font-size: 25px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    #portfolio .item-wrapper .articles article {
+        justify-content: space-between !important;
+    }
+
+    #portfolio .item-wrapper .articles article:hover .image-wrapper .hover-img {
+        margin-right: 50px;
+        margin-left: 150px;
+    }
+
+    #portfolio .item-wrapper .articles article .image-wrapper h1 {
+        align-self: center !important;
+    }
+
+    #portfolio .item-wrapper .articles article .subtitle-wrapper {
+        align-self: center !important;
     }
 }
 
