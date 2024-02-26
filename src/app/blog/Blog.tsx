@@ -15,17 +15,29 @@ import '@splidejs/react-splide/css';
 import '@splidejs/react-splide/css/core';
 import './Blog.css'
 
-interface SlidesProps {
+export interface SlidesProps {
     src: string,
     alt: string,
 }
 
-interface DetailsProps {
+export interface DetailsProps {
     title: string,
     subtitle: string,
 }
 
-export const Blog: React.FC = () => {
+export interface ParaProps {
+    para: string,
+}
+
+interface BlogProps {
+    caption: string,
+    slides: SlidesProps[],
+    details: DetailsProps[],
+    para1: string,
+    para2: ParaProps[],
+}
+
+export const Blog: React.FC<BlogProps> = ({ caption, slides, details, para1, para2 }) => {
     useEffect(() => {
         AOS.init({
             disable: false,
@@ -50,49 +62,30 @@ export const Blog: React.FC = () => {
     const options = {
         type: 'loop',
         autoplay: true,
-        interval: 2000,
+        interval: 3000,
         pauseOnHover: false,
         resetProgress: false,
     }
 
-    const slidesItems: SlidesProps[] = [
-        {
-            src: "https://wpriverthemes.com/HTML/uniiq/assets/images/bp1c.png",
-            alt: "img1"
-        },
-        {
-            src: "https://wpriverthemes.com/HTML/uniiq/assets/images/bp1r.png",
-            alt: "img2"
-        },
-        {
-            src: "https://wpriverthemes.com/HTML/uniiq/assets/images/bp1l.png",
-            alt: "img3"
-        },
-    ]
+    const words = caption.split(' ');
+    const lastWord = words.pop();
+    const firstPart = words.join(' ');
 
-    const detailsItems: DetailsProps[] = [
-        {
-            title: "Year",
-            subtitle: "2023"
-        },
-        {
-            title: "Author",
-            subtitle: "Al Ashfaq"
-        },
-        {
-            title: "Category",
-            subtitle: "Blog"
-        },
-        {
-            title: "Service",
-            subtitle: "Hype Solutions"
-        },
-    ]
+    const slidesItems: SlidesProps[] = slides;
+
+    const detailsItems: DetailsProps[] = details
+
+    const paraItems: ParaProps[] = para2
 
     return (
         <main>
             <div className='item-wrapper'>
-                <div className='caption flex justify-center'></div>
+                <div className='caption flex justify-center'>
+                    <h2 className='font-semibold text-center'>
+                        {firstPart}&nbsp;
+                        <span>{lastWord}</span>
+                    </h2>
+                </div>
                 <Splide
                     aria-label="carousel"
                     options={options}
@@ -120,7 +113,7 @@ export const Blog: React.FC = () => {
                                 {detailsItems.map((detail, index) => (
                                     <div key={index} className='detail-items'>
                                         <p>{detail.title}</p>
-                                        <p>{detail.subtitle}</p>
+                                        <p className='font-medium'>{detail.subtitle}</p>
                                     </div>
                                 ))}
                             </div>
@@ -129,10 +122,24 @@ export const Blog: React.FC = () => {
                                 data-aos='fade-up'
                                 data-aos-duration='1000'
                             >
-
+                                <h3 className='text-base font-semibold'>Description</h3>
+                                <p className='text-base font-medium'>
+                                    {para1}
+                                </p>
                             </div>
                         </div>
-                        <div className='para'></div>
+                        <div className='para'>
+                            {paraItems.map((para, index) => (
+                                <p
+                                    key={index}
+                                    data-aos='fade-up'
+                                    data-aos-duration='1000'
+                                    className='aos-init aos-animate text-base font-medium text-justify'
+                                >
+                                    {para.para}
+                                </p>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>

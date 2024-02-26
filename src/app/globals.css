@@ -222,6 +222,7 @@ li {
 }
 
 .item-wrapper {
+    -webkit-animation: entry-animation 2s;
     animation: entry-animation 2s;
 }
 
@@ -326,9 +327,9 @@ li {
         margin: 80px 0 !important;
     }
 
-    #portfolioDetail .item-wrapper .slider .splide-track .splide-slide {
+    /* #portfolioDetail .item-wrapper .slider .splide-track .splide-slide {
         max-width: 950px !important;
-    }
+    } */
 
     #portfolioDetail .item-wrapper .blContent {
         margin: 100px 0 60px !important;
@@ -493,13 +494,18 @@ li {
         max-width: 100% !important;
     }
 
-    #portfolioDetail .item-wrapper .slider {
-        margin: 80px 0 !important;
+    #portfolioDetail .item-wrapper .caption h2 {
+        font-size: 25px !important;
+        padding: 0 80px !important;
     }
 
-    #portfolioDetail .item-wrapper .slider .splide-track .splide-slide {
-        max-width: 720px !important;
+    #portfolioDetail .item-wrapper .slider {
+        margin: 50px 0 !important;
     }
+
+    /* #portfolioDetail .item-wrapper .slider .splide-track .splide-slide {
+        max-width: 720px !important;
+    } */
 
     #portfolioDetail .item-wrapper .blContent .blContent-wrapper {
         max-width: 720px !important;
@@ -652,6 +658,22 @@ li {
         line-height: 25px !important;
     }
 
+    #portfolioDetail .item-wrapper {
+        max-width: calc(100vw - 50px) !important;
+    }
+
+    #portfolioDetail .item-wrapper .caption h2 {
+        font-size: 20px !important;
+    }
+
+    #portfolioDetail .item-wrapper .slider {
+        margin: 0px !important;
+    }
+
+    /* #portfolioDetail .item-wrapper .slider .splide-track .splide-slide {
+        max-width: 500px !important;
+    } */
+
     #portfolioDetail .item-wrapper .blContent .blContent-wrapper {
         max-width: 950px !important;
     }
@@ -662,6 +684,10 @@ li {
 
     #portfolioDetail .item-wrapper .blContent .blContent-wrapper .det_des .details {
         margin-bottom: 40px !important;
+    }
+
+    #portfolioDetail .item-wrapper .blContent .blContent-wrapper .para p {
+        margin-bottom: 30px;
     }
 }
 
@@ -798,6 +824,27 @@ li {
 
     #contact main footer .reach div:first-child {
         margin: 0 !important;
+    }
+
+    #portfolioDetail .item-wrapper {
+        max-width: calc(100vw - 20px) !important;
+    }
+
+    #portfolioDetail .item-wrapper .caption h2 {
+        padding: 0 !important;
+        line-height: 30px !important;
+    }
+
+    #portfolioDetail .item-wrapper .slider {
+        margin: 40px 0 0 !important;
+    }
+
+    /* #portfolioDetail .item-wrapper .slider .splide-track .splide-slide {
+        max-width: 420px !important;
+    } */
+
+    #portfolioDetail .item-wrapper .blContent {
+        margin: 30px 0;
     }
 
     #portfolioDetail .item-wrapper .blContent .blContent-wrapper .det_des {
