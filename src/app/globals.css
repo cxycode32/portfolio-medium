@@ -563,10 +563,6 @@ li {
         margin: 40px 0px 100px !important;
     }
 
-    .left-sidebar {
-        display: none !important;
-    }
-
     .menu-icon-wrapper {
         display: block !important;
     }
@@ -590,6 +586,7 @@ li {
         flex-direction: column !important;
     }
 
+    .content header nav,
     #connect section .hide4 {
         display: none !important;
     }

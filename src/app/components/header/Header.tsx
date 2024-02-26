@@ -1,4 +1,7 @@
+"use client"
+
 import Image from 'next/image'
+import { useState } from 'react'
 import { Dribbble, Twitter, Instagram } from 'iconoir-react'
 import { ReactNode } from 'react'
 import './Header.css'
@@ -21,6 +24,12 @@ interface leftSidebarItemProps {
 export const Header: React.FC = () => {
 
     const iconSize: number = 24;
+
+    const [isActive, setIsActive] = useState(false);
+
+    const toggleMenu = () => {
+        setIsActive(!isActive);
+    }
 
     const navItem: navItemProps[] = [
         {
@@ -52,13 +61,13 @@ export const Header: React.FC = () => {
 
     const contactItem: contactItemProps[] = [
         {
-            icon: <Dribbble height={iconSize} width={iconSize} />,
+            icon: <Dribbble height={iconSize} width={iconSize} className='icon' />,
         },
         {
-            icon: <Twitter height={iconSize} width={iconSize} />,
+            icon: <Twitter height={iconSize} width={iconSize} className='icon' />,
         },
         {
-            icon: <Instagram height={iconSize} width={iconSize} />,
+            icon: <Instagram height={iconSize} width={iconSize} className='icon' />,
         }
     ]
 
@@ -119,12 +128,15 @@ export const Header: React.FC = () => {
                 ))}
             </div>
             <div className="menu-icon-wrapper">
-                <div className='menu-icon flex flex-col items-end'>
+                <div
+                    className={`menu-icon flex flex-col items-end ${isActive ? 'active' : ''}`}
+                    onClick={toggleMenu}
+                    >
                     <span></span>
                     <span></span>
                     <span></span>
                 </div>
-                <div className='mobile-hamburger'>
+                <div className={`mobile-hamburger ${isActive ? 'active' : ''}`}>
                     <div className='left-sidebar'>
                         <p>Menu</p>
                         <ul>
@@ -137,7 +149,16 @@ export const Header: React.FC = () => {
                             ))}
                         </ul>
                     </div>
-                    <div className='social'></div>
+                    <div className='social'>
+                        <p>Social</p>
+                        <aside className='flex gap-[30px]'>
+                            {contactItem.map((item, index) => (
+                                <a key={index} href="#">
+                                    {item.icon}
+                                </a>
+                            ))}
+                        </aside>
+                    </div>
                 </div>
             </div>
         </header>
